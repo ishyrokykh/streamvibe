@@ -1,9 +1,8 @@
-import { defineConfig } from "minista"
+import {defineConfig,} from "minista";
 import path from "path";
 
-export default defineConfig({
+const commonConfig: ReturnType<typeof defineConfig> = {
     root: "",
-    base: "/",
     public: "public",
     out: "dist",
     assets: {
@@ -141,4 +140,9 @@ export default defineConfig({
         },
     },
     vite: {},
-})
+};
+
+export default (overriddenConfig: ReturnType<typeof defineConfig> = {}) => ({
+    ...commonConfig,
+    ...overriddenConfig,
+});

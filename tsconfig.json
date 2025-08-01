@@ -13,5 +13,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["./minista.config.ts", "src"]
+  "include": [
+    "./minista.dev.config.ts", "./minista.prod.config.ts", "./minista.common.config.ts", "src"]
 }
