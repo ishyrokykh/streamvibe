@@ -2,9 +2,9 @@
   "name": "minista-project",
   "private": true,
   "scripts": {
-    "dev": "minista",
-    "build": "minista build && npm run css:optimize",
-    "preview": "minista preview",
+    "dev": "minista --config minista.dev.config.ts",
+    "build": "minista --config minista.prod.config.ts build && npm run css:optimize",
+    "preview": "minista --config minista.prod.config.ts preview",
     "css:optimize": "postcss dist/assets/bundle.css -o dist/assets/bundle.css --use mqpacker",
     "deploy": "gh-pages -d dist"
   },
