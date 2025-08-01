@@ -1,0 +1,27 @@
+.grid {
+  --grid-columns: 1;
+
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  gap: fluid-to-laptop(30, 20);
+
+  &--2 {
+    --grid-columns: 2;
+  }
+
+  &--3 {
+    --grid-columns: 3;
+
+    @include tablet {
+      --grid-columns: 2;
+
+      .grid__item:nth-child(odd):last-child {
+        grid-column: -1 / 1;
+      }
+    }
+
+    @include mobile {
+      --grid-columns: 1;
+    }
+  }
+}
