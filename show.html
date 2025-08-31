@@ -35,6 +35,24 @@
             </ul>
           </nav>
           <div class="header__actions">
+            <div class="select header__theme-switcher" data-theme-switcher="">
+              <label class="select__label visually-hidden" id="theme-switcher-label" for="theme-switcher">Theme Switcher</label>
+              <select data-js-select-original-control="" class="select__original-control header__theme-switcher-button" id="theme-switcher" tabindex="-1" aria-hidden="true">
+                <option value="Netflix theme" selected="">Netflix theme</option>
+                <option value="Power Rangers theme">Power Rangers theme</option>
+                <option value="Hulk theme">Hulk theme</option>
+                <option value="Joker theme">Joker theme</option>
+              </select>
+              <div class="select__body">
+                <div class="select__button header__theme-switcher-button" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-controls="theme-switcher-dropdown" aria-labelledby="theme-switcher-label" data-js-select-button="" aria-activedescendant="theme-switcher-option-0">Netflix theme</div>
+                <div class="select__dropdown" id="theme-switcher-dropdown" role="listbox" aria-labelledby="theme-switcher-label" data-js-select-dropdown="">
+                  <div class="select__option is-selected is-current" id="theme-switcher-option-0" role="option" aria-selected="true" data-js-select-option="">Netflix theme</div>
+                  <div class="select__option" id="theme-switcher-option-1" role="option" aria-selected="false" data-js-select-option="">Power Rangers theme</div>
+                  <div class="select__option" id="theme-switcher-option-2" role="option" aria-selected="false" data-js-select-option="">Hulk theme</div>
+                  <div class="select__option" id="theme-switcher-option-3" role="option" aria-selected="false" data-js-select-option="">Joker theme</div>
+                </div>
+              </div>
+            </div>
             <button class="header__button button button--transparent" type="button" aria-label="Search" title="Search"><span class="button__icon icon">
                 <svg fill="none" stroke="currentColor">
                   <use href="/streamvibe/assets/images/icons.svg#search"></use>
