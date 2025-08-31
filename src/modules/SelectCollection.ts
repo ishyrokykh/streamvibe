@@ -3,7 +3,7 @@ import MatchMedia from "@/constants/MatchMedia";
 
 const rootSelector = '[data-js-select]';
 
-type TSelectEntities = 'root' | 'originalControl' | 'button' | "dropdown" | 'option';
+type TSelectEntities = 'originalControl' | 'button' | "dropdown" | 'option';
 
 type TSelectState = {
     isExpanded: boolean,
@@ -13,9 +13,8 @@ type TSelectState = {
 
 type TSelectStates = 'isExpanded' | 'isSelected' | 'isCurrent' | 'isOnTheLeftSide' | 'isOnTheRightSide';
 
-class Select extends BaseComponent<TSelectState> {
+export class Select extends BaseComponent<TSelectState> {
     readonly selectors: Record<TSelectEntities, string> = {
-        root: rootSelector,
         originalControl: '[data-js-select-original-control]',
         button: '[data-js-select-button]',
         dropdown: '[data-js-select-dropdown]',
@@ -252,12 +251,12 @@ class Select extends BaseComponent<TSelectState> {
 }
 
 class SelectCollection {
-    constructor() {
-        this.init();
+    constructor(selector: string = rootSelector) {
+        this.init(selector);
     }
 
-    init() {
-        document.querySelectorAll(rootSelector).forEach((element) => {
+    init(selector: string) {
+        document.querySelectorAll(selector).forEach((element) => {
             new Select(element as HTMLElement);
         });
     }

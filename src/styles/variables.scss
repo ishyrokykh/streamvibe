@@ -2,6 +2,32 @@
   --color-white: #ffffff;
   --color-black: #000000;
 
+  --border: var(--border-width-s) solid var(--color-black-15);
+
+  --border-width-xl: 6px;
+  --border-width-l: 4px;
+  --border-width-m: 3px;
+  --border-width-s: 1px;
+
+  --border-radius-l: 12px;
+  --border-radius-m: 10px;
+  --border-radius-s: 8px;
+  --border-radius-xs: 6px;
+  --border-radius-xxs: 5px;
+  --border-radius-xxxs: 4px;
+
+  --font-family-base: 'Manrope', sans-serif;
+
+  --container-width: #{fluid-to-laptop($container-desktop-width, $container-laptop-width)};
+  --container-padding-x: 16px;
+
+  --section-padding-y: #{fluid(75, 40)};
+
+  --transition-duration: 0.2s;
+  --transition-duration-longer: 0.4s;
+}
+
+:root, [data-theme="Netflix theme"] {
   --color-red-45: #e50000;
   --color-red-50: #ff0000;
   --color-red-55: #ff1919;
@@ -28,28 +54,91 @@
   --color-gray-95: #f1f1f3;
   --color-gray-97: #f7f7f8;
   --color-gray-99: #fcfcfd;
+}
 
-  --border: var(--border-width-s) solid var(--color-black-15);
+[data-theme="Power Rangers theme"] {
+  --color-red-45: #d41e3c;
+  --color-red-50: #ed2939;
+  --color-red-55: #f03e52;
+  --color-red-60: #f35368;
+  --color-red-80: #f99aa8;
+  --color-red-90: #fcc5ce;
+  --color-red-95: #fde2e6;
+  --color-red-99: #fff5f6;
 
-  --border-width-xl: 6px;
-  --border-width-l: 4px;
-  --border-width-m: 3px;
-  --border-width-s: 1px;
+  --color-black-06: #0a0b0d;
+  --color-black-08: #0f1114;
+  --color-black-10: #14171b;
+  --color-black-12: #191d22;
+  --color-black-15: #1f242a;
+  --color-black-20: #2b323b;
+  --color-black-25: #384149;
+  --color-black-30: #455058;
 
-  --border-radius-l: 12px;
-  --border-radius-m: 10px;
-  --border-radius-s: 8px;
-  --border-radius-xs: 6px;
-  --border-radius-xxs: 5px;
-  --border-radius-xxxs: 4px;
+  --color-gray-60: #8891a0;
+  --color-gray-65: #95a0af;
+  --color-gray-70: #a3aebb;
+  --color-gray-75: #b1bcc8;
+  --color-gray-90: #dce1e7;
+  --color-gray-95: #eef0f3;
+  --color-gray-97: #f5f6f8;
+  --color-gray-99: #fbfcfc;
+}
 
-  --font-family-base: 'Manrope', sans-serif;
+[data-theme="Hulk theme"] {
+  --color-red-45: #2d5016;
+  --color-red-50: #3e6b1f;
+  --color-red-55: #4e8525;
+  --color-red-60: #5fa030;
+  --color-red-80: #92c563;
+  --color-red-90: #b8da94;
+  --color-red-95: #dcedca;
+  --color-red-99: #f5faf0;
 
-  --container-width: #{fluid-to-laptop($container-desktop-width, $container-laptop-width)};
-  --container-padding-x: 16px;
+  --color-black-06: #0a0c09;
+  --color-black-08: #0f120e;
+  --color-black-10: #141815;
+  --color-black-12: #191e1a;
+  --color-black-15: #1f2520;
+  --color-black-20: #2b332b;
+  --color-black-25: #384137;
+  --color-black-30: #454f44;
 
-  --section-padding-y: #{fluid(75, 40)};
+  --color-gray-60: #8a9688;
+  --color-gray-65: #97a395;
+  --color-gray-70: #a5b0a3;
+  --color-gray-75: #b2bcb0;
+  --color-gray-90: #dde2dc;
+  --color-gray-95: #eff1ee;
+  --color-gray-97: #f6f7f6;
+  --color-gray-99: #fbfcfb;
+}
 
-  --transition-duration: 0.2s;
-  --transition-duration-longer: 0.4s;
+[data-theme="Joker theme"] {
+  --color-red-45: #5b2c6f;
+  --color-red-50: #6c3483;
+  --color-red-55: #7d3c98;
+  --color-red-60: #8e44ad;
+  --color-red-80: #b47cc9;
+  --color-red-90: #d2b4de;
+  --color-red-95: #ebddf1;
+  --color-red-99: #faf7fc;
+
+  --color-black-06: #0b0a0d;
+  --color-black-08: #100f13;
+  --color-black-10: #16141a;
+  --color-black-12: #1b1920;
+  --color-black-15: #221f28;
+  --color-black-20: #302b3a;
+  --color-black-25: #3e3848;
+  --color-black-30: #4c4556;
+
+  --color-gray-60: #918c9e;
+  --color-gray-65: #9e99ab;
+  --color-gray-70: #aca7b7;
+  --color-gray-75: #bab5c3;
+  --color-gray-90: #e1dee6;
+  --color-gray-95: #f0eff2;
+  --color-gray-97: #f7f6f8;
+  --color-gray-99: #fcfbfd;
 }
