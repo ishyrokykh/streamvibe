@@ -4,6 +4,7 @@ import {GlobalProps} from "minista/dist/types/shared";
 import classNames from "classnames";
 import Button from "@/components/Button";
 import BurgerButton from "@/components/BurgerButton";
+import Select from "@/components/Select";
 
 type TMenuItem = {
     label: string;
@@ -61,6 +62,28 @@ const Header = ({url, isFixed}: Pick<GlobalProps, 'url'> & THeaderProps) => {
                     </ul>
                 </nav>
                 <div className="header__actions">
+                    <Select
+                        label="Theme Switcher"
+                        isLabelHidden
+                        className="header__theme-switcher"
+                        buttonClassName="header__theme-switcher-button"
+                        rootAttribute="data-theme-switcher"
+                        options={[
+                            {
+                                value: 'Netflix theme',
+                                isSelected: true,
+                            },
+                            {
+                                value: 'Power Rangers theme',
+                            },
+                            {
+                                value: 'Hulk theme',
+                            },
+                            {
+                                value: 'Joker theme',
+                            }
+                        ]}
+                    />
                     <Button className="header__button" mode="transparent" iconBefore="search" label="Search" />
                     <Button className="header__button" mode="transparent" iconBefore="notification" label="Notifications" />
                 </div>

@@ -148,6 +148,20 @@
     }
   }
 
+  &__theme-switcher {
+    .select__option {
+      color: var(--color-gray-60);
+    }
+
+    &-button.select__button {
+      width: 100%;
+      height: fluid-to-laptop(67, 53);
+      padding-inline: fluid-to-laptop(20, 16);
+      color: var(--color-white);
+      background-color: var(--color-black-08);
+    }
+  }
+
   &__burger-button {
     position: relative;
   }

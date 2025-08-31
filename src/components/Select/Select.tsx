@@ -11,9 +11,11 @@ type TSelectProps = {
         isSelected?: boolean;
     }[];
     buttonClassName?: string;
+    className?: string;
+    rootAttribute?: string;
 }
 
-const Select = ({options, buttonClassName, isLabelHidden = true, label, id = getIdFromTitle(label)}: TSelectProps) => {
+const Select = ({options, buttonClassName, className, rootAttribute = 'data-js-select', isLabelHidden = true, label, id = getIdFromTitle(label)}: TSelectProps) => {
     const IDs = {
         originalControl: id,
         label: `${id}-label`,
@@ -27,7 +29,7 @@ const Select = ({options, buttonClassName, isLabelHidden = true, label, id = get
         return `${id}-option-${index}`
     }
     return (
-        <div className='select' data-js-select="">
+        <div className={classNames('select', className)} {...{ [rootAttribute]: ""} }>
             <label className={classNames('select__label', {
                 'visually-hidden': isLabelHidden
             })} id={IDs.label} htmlFor={IDs.originalControl}>{label}</label>
